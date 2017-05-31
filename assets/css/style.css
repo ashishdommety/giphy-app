@@ -1,3 +1,14 @@
-body{
+.top{
   background-color: grey;
+  height:100px;
+}
+.animals{
+  width:200px;
+  height:200px;
+}
+.animal{
+  border:none;
+  background-color: blue;
+  color:white;
+  margin:10px;
 }
