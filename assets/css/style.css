@@ -1,14 +1,60 @@
 .top{
-  background-color: grey;
-  height:100px;
+  /*background-color: #352D39;*/
+  background-color: #775266;
 }
 .animals{
-  width:200px;
-  height:200px;
+  width:150px;
+  height:150px;
+  margin: 10px;
 }
+
 .animal{
   border:none;
-  background-color: blue;
+  background-color: #6D435A;
+  padding:10px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 0px #4f2d42;
   color:white;
   margin:10px;
+}
+
+.animal:focus, #add-animal:focus, #animal-input:focus{
+  outline:none;
+}
+.white{
+  color:white;
+  text-align: center;
+}
+.gifs{
+  background-color: #FF6978;
+  height:510px;
+}
+.search{
+  background-color: #B1EDE8;
+  height:200px;
+}
+#animal-form{
+  margin: 20px;
+  text-align: center;
+}
+.favs{
+  background-color: #68576d;
+  height:310px;
+}
+#add-animal{
+  border:none;
+  background-color: #8dc9c9;
+  padding:10px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 0px #668f9e;
+  color:#476577;
+  margin:10px;
+}
+#animal-input{
+  border-radius: 10px;
+  padding:10px;
+}
+label{
+  font-size: 20px;
+  color:#476577;
 }

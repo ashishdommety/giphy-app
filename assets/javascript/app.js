@@ -1,8 +1,6 @@
 $(document).ready(function(){
   var topics = ['cat','dog','dolphin','horse','skunk'];
 
-  var flip = true;
-
   function displayTopic(){
     $('.gifs').empty();
       var topic = $(this).attr('data-name');
@@ -19,6 +17,7 @@ $(document).ready(function(){
           pic.attr('data-num',i);
           $('.gifs').append(pic);
         }
+        var flip = true;
         $(document).on('click','.animals',function(){
           if(flip){
             var num = $(this).data('num');
