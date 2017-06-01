@@ -21,54 +21,41 @@ $(document).ready(function() {
         $('.gifs').append(pic);
       }
       flip = true;
-      $('.animals').off().on('click', function() {
-        if (flip) {
+      $('.animals').on('click', function() {
+          if (flip) {
+            num = $(this).data('num');
+            var link = response.data[num].images.fixed_height.url;
+            $(this).attr('src', link);
+            flip = false;
+          } else {
+            num = $(this).data('num');
+            var still = response.data[num].images.fixed_height_still.url;
+            $(this).attr('src', still);
+            flip = true;
+          }
+      }).draggable({
+        start: function getLink(event, ui) {
           num = $(this).data('num');
-          var link = response.data[num].images.fixed_height.url;
-          $(this).attr('src', link);
-          flip = false;
-        } else {
-          num = $(this).data('num');
-          var still = response.data[num].images.fixed_height_still.url;
-          $(this).attr('src', still);
-          flip = true;
-        }
-      });
-      $('.animals').draggable({
-        start: function getLink(event,ui){
-         num = $(this).data('num');
         },
-        containment:'window',
-        cursor:'move',
-        snap:'.drops',
-        stack:'img',
-        distance:0,
-        revert:true
+        containment: 'window',
+        cursor: 'move',
+        snap: '.drops',
+        stack: 'img',
+        distance: 0,
+        revert: true
       });
       $('.drops').droppable({
-        drop: function handleDrop(event,ui){
+        drop: function handleDrop(event, ui) {
           var draggable = ui.draggable;
           var still = response.data[num].images.fixed_height_still.url;
           var link = response.data[num].images.fixed_height.url
           $(this).attr('src', still);
-          $(this).parent().attr('href',link);
-        }
-      });
-      $('.drops').draggable({
-        start: function getElem(){
-          changeBack = $(this);
-        },
-        cursor:'move',
-        revert: true,
-      });
-      $('.gifs').droppable({
-        drop: function returnGif(event,ui){
-          changeBack.attr('src', 'assets/images/placeholder.jpg');
+          $(this).parent().attr('href', link);
         }
       });
     });
   }
-
+  
   function renderButtons() {
     for (var i = 0; i < topics.length; i++) {
       var a = $('<button>');
@@ -82,7 +69,7 @@ $(document).ready(function() {
 
   $('#add-animal').on('click', function(event) {
     event.preventDefault();
-    $('.gifs').css('height',null);
+    $('.gifs').css('height', null);
     $('.top').empty();
     var animal = $('#animal-input').val().trim();
     topics.push(animal);
