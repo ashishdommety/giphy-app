@@ -19,6 +19,8 @@ $(document).ready(function() {
         pic.attr('data-num', i);
         $('.gifs').append(pic);
       }
+
+      //adding the click toggle and the dragging options
       flip = true;
       $('.animals').on('click', function() {
           if (flip) {
@@ -33,9 +35,6 @@ $(document).ready(function() {
             flip = true;
           }
       }).draggable({
-        start: function getLink(event, ui) {
-          num = $(this).data('num');
-        },
         containment: 'window',
         cursor: 'move',
         snap: '.drops',
@@ -74,7 +73,7 @@ $(document).ready(function() {
     topics.push(animal);
     renderButtons();
     $('#animal-input').val('')
-  })
+  });
 
   $(document).on('click', '.animal', displayTopic);
 });
