@@ -1,5 +1,7 @@
+body{
+  background-color: #332129;
+}
 .top{
-  /*background-color: #352D39;*/
   background-color: #775266;
 }
 .animals{
@@ -22,7 +24,7 @@
   outline:none;
 }
 .white{
-  color:white;
+  color:#FFFCF9;
   text-align: center;
 }
 .gifs{
@@ -40,6 +42,8 @@
 .favs{
   background-color: #68576d;
   height:310px;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 #add-animal{
   border:none;
@@ -47,7 +51,7 @@
   padding:10px;
   border-radius: 10px;
   box-shadow: 5px 5px 0px #668f9e;
-  color:#476577;
+  color:#FFFCF9;
   margin:10px;
 }
 #animal-input{
