@@ -2,7 +2,6 @@ $(document).ready(function() {
   var topics = ['cat', 'dog', 'dolphin', 'horse', 'skunk'];
   var num;
   var flip;
-  var changeBack;
 
   function displayTopic() {
     $('.gifs').empty();
@@ -55,7 +54,7 @@ $(document).ready(function() {
       });
     });
   }
-  
+
   function renderButtons() {
     for (var i = 0; i < topics.length; i++) {
       var a = $('<button>');
