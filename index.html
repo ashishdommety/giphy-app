@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <title>Giphy app</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
@@ -24,20 +25,28 @@
             <br>
             <input type="text" id="animal-input"><br>
             <!-- Button triggers new animal to be added -->
-            <input id="add-animal" type="submit" value="Add Here">
+            <input class="add-animal" type="submit" value="Add Here">
           </form>
         </div>
         <div class="row favs">
-          <h3 class="row white">Drag favourites here: </h3>
-          <p class='white'>(You can also drag images over existing favourites to replace them)</p>
+          <div class="white">
+            <h2 class='bonus'>Bonus Feature!</h2>
+            <h3 class="row">Drag favourites here: </h3>
+            <p class=''>(You can also drag images over existing favourites to replace them)</p>
+          </div>
+
           <div id="favourite" class='row'>
             <!-- favourites get added here when dragged -->
-            <a target='_blank' href="https://c2.staticflickr.com/8/7240/7297872610_13d9fd3d69_z.jpg">
-              <img class='col-md-6 drops' src="assets/images/placeholder.jpg">
-            </a>
-            <a target='_blank' href="https://c2.staticflickr.com/8/7240/7297872610_13d9fd3d69_z.jpg">
-              <img class='col-md-6 drops' src="assets/images/placeholder.jpg">
-            </a>
+            <div class="col-md-6">
+              <a target='_blank' href="https://c2.staticflickr.com/8/7240/7297872610_13d9fd3d69_z.jpg">
+                <img class='drops' src="assets/images/placeholder.jpg">
+              </a>
+            </div>
+            <div class="col-md-6">
+              <a target='_blank' href="https://c2.staticflickr.com/8/7240/7297872610_13d9fd3d69_z.jpg">
+                <img class='drops' src="assets/images/placeholder.jpg">
+              </a>
+            </div>
           </div>
         </div>
       </div>
